@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { 
   Text, 
   View, 
-  StyleSheet
+  StyleSheet,
+  Image
 } from 'react-native-web'
 import Icon from './assets/icon.jpg'
 
@@ -12,7 +13,7 @@ export default class App extends Component {
       <View style={Styles.container}>
         <Text style={Styles.textStyle}>Welcome to react-native Hello world!</Text>
         <br/>
-        <TopImage>Hello</TopImage>
+        <Image source={url: Icon} style={Styles.imageStyle} />
       </View>
     )
   }
@@ -26,5 +27,8 @@ const Styles = StyleSheet.create({
   textStyle: {
     fontSize: 15,
     color: 'white'
+  },
+  imageStyle: {
+    width: '100%'
   }
 })
